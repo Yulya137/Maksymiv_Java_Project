@@ -1,0 +1,45 @@
+public class Animal {
+    Integer number_of_paws;
+    String say;
+    String name;
+
+    public Animal(Integer number_of_paws, String say, String name) {
+        this.number_of_paws = number_of_paws;
+        this.say = say;
+        this.name = name;
+    }
+
+
+    Integer paws() {
+        System.out.println("Number of paws is " + number_of_paws);
+        return number_of_paws;
+
+    }
+
+    String name() {
+        System.out.println("Name is " + name);
+        return name;
+
+    }
+
+    void say(String say) {
+        System.out.println("This animal says " + say);
+        //return say;
+
+    }
+
+    public static void main(String[] args) {
+
+        Animal dog = new Animal(null, null, null);
+
+        dog.number_of_paws = 4;
+        dog.name = "Tuzik";
+        dog.say("gaf");
+        //dog.say = "gaf";
+        dog.name();
+        dog.paws();
+        //dog.Say();
+
+
+    }
+}
