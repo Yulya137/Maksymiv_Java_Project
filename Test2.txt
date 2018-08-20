@@ -1,0 +1,26 @@
+package MyTest;
+
+public  class Calc {
+
+        public static Double sum (double a, double b)
+        {
+            return  a+b;
+        }
+        public static   Double difference (double a, double b)
+        {
+            return a-b;
+        }
+        public static Double mul (double a, double b)
+        {
+            return a*b;
+
+        }
+   public static Double division (double a, double b)
+   {
+                return a/b;
+
+   }
+
+
+
+}

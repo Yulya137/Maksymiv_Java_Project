@@ -1,0 +1,95 @@
+package MyTest;
+
+
+import org.testng.Assert;
+import org.testng.annotations.AfterGroups;
+import org.testng.annotations.BeforeGroups;
+import org.testng.annotations.Test;
+
+public class Mytests {
+    @Test
+
+    public void testsum()
+    {
+        Double n1=5.1;
+        Double n2=2.7;
+        Double res = 7.8;
+        Assert.assertEquals(Calc.sum(n1,n2),res);
+    }
+    @Test
+    public void testsum1()
+    {
+        Double n1=5.1;
+        Double n2=2.7;
+        Double res = 7.9;
+        Assert.assertEquals(Calc.sum(n1,n2),res);
+    }
+    @Test
+    public void testdiff()
+    {
+        Double n1=5.1;
+        Double n2=2.7;
+        Double res = 2.3999999999999995;
+        Assert.assertEquals(Calc.difference(n1,n2),res);
+    }
+
+   @Test
+
+    public void testdiff1()
+    {
+        Double n1=5.1;
+        Double n2=2.7;
+        Double res = 2.399;
+        Assert.assertEquals(Calc.difference(n1,n2),res);
+    }
+
+    @Test
+    public void mul()
+    {
+        Double n1=5.1;
+        Double n2=2.7;
+        Double res = 13.77;
+        Assert.assertEquals(Calc.mul(n1,n2),res);
+    }
+
+    @Test
+    public void testmul()
+    {
+        Double n1=5.1;
+        Double n2=2.7;
+        Double res = 2.399;
+        Assert.assertEquals(Calc.mul(n1,n2),res);
+    }
+    @BeforeGroups
+    public void check ()
+    {
+        System.out.print("Divisor must not be zero");
+    }
+
+    @Test (groups = "SuccessDivision")
+    public void div()
+    {
+        Double n1=6.0;
+        Double n2=2.0;
+        Double res = 3.0;
+        Assert.assertEquals(Calc.division(n1,n2),res);
+    }
+
+    @Test (groups = "FailDivision")
+
+    public void div1()
+    {
+        Double n1=6.0;
+        Double n2=2.0;
+
+        Double res = 4.0;
+        Assert.assertEquals(Calc.division(n1,n2),res);
+    }
+
+    @AfterGroups
+    public void res()
+    {
+
+    }
+
+}
